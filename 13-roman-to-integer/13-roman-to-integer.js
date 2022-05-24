@@ -13,12 +13,12 @@ var romanToInt = function(s) {
     let idx = numerals.indexOf(s[i])
     // result += values[idx]
     temp = s[i+1]
-    if (s[i] === 'I', 'X', 'C'){
+    if (s[i] === 'I' || s[i] === 'X' || s[i] === 'C'){
       result += values[idx]
       if ((temp === 'V' || temp === 'X') && (s[i] === 'I')) result -= 2
       if ((temp === 'L' || temp === 'C') && (s[i] === 'X')) result -= 20
       if ((temp === 'D' || temp === 'M') && (s[i] === 'C')) result -= 200
-    }
+    } else result += values[idx]
   }
   return result
 };
