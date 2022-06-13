@@ -14,9 +14,9 @@ var searchInsert = function(nums, target) {
   } else {
     let mid = Math.floor(nums.length/2)
     if (target > nums[mid]){
-      console.log('big')
+      // console.log('big')
       for (let i = mid; i<nums.length; i++){
-        console.log(nums[i], 'nums[i]')
+        // console.log(nums[i], 'nums[i]')
         if (target > nums[i]){
           if (target < nums[i+1] || !nums[i+1]){
             return i+1
@@ -24,9 +24,9 @@ var searchInsert = function(nums, target) {
         }
       }
     } else {
-      console.log('small')
+      // console.log('small')
       for (let i = mid; i>=0; i--){
-        console.log(nums[i], 'nums[i]')
+        // console.log(nums[i], 'nums[i]')
         if (target < nums[i]){
           if (target > nums[i-1] || !nums[i-1]){
             return i
