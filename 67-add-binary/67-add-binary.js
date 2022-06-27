@@ -32,6 +32,7 @@ const addBinary = function(a, b) {
     } else if (a[i] === '1' && b[i] === '1'){
       if (addOne) {
         result = '1' + result
+        addOne = 1
       } else {
         result = '0' + result
         addOne = 1
